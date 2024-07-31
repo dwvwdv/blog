@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     template: '%s | zhangyu.dev',
   },
   verification: {
-    google: 'ULSANpODFw1TULe1QTOUFT8z8QXPVIA1MRTMQL7PAbw',
+    google: '',
   },
 }
 
