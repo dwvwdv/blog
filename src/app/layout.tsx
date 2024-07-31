@@ -38,28 +38,31 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  applicationName: 'zhangyu.dev',
+  applicationName: `LazyBone's blog`,
   authors: {
-    name: 'zhangyu1818',
-    url: 'https://github.com/zhangyu1818',
+    name: 'dwvwdv',
+    url: 'https://github.com/dwvwdv',
   },
-  creator: 'zhangyu1818',
+  creator: 'dwvwdv',
   description:
-    'Dive into front-end development with a focus on React, cutting-edge frameworks, JavaScript, TypeScript, Swift, Animation and more',
+    `A full stack,I hate deadline,just want happy coding,
+			happiness is the driving force behind everything.`,
   generator: 'Next.js',
   keywords: [
-    'Front-end Development',
-    'React',
-    'JavaScript',
+    'Full Stack Developer',
+    '.NET',
+    'Qt',
+    'Angular',
+    'Flutter',
+		'C#',
+		'C++',
     'TypeScript',
-    'CSS',
-    'Animation',
-    'Swift',
+    'Dart',
   ],
-  publisher: 'zhangyu1818',
+  publisher: 'dwvwdv',
   title: {
-    absolute: 'zhangyu.dev',
-    template: '%s | zhangyu.dev',
+    absolute: `LazyBone's blog`,
+    template: `%s | LazyBone's blog`,
   },
   verification: {
     google: '',
