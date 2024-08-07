@@ -1,8 +1,9 @@
-# Blog
+# LazyBone's Blog
 
-My personal blog.
+My personal blog source code! 
+clone to [zhangyu1818](https://github.com/zhangyu1818/blog).
 
-[zhangyu.dev](zhangyu.dev)
+[LazyBone's blog](blog.lazyrhythm.com)
 
 Using [Next.js](https://nextjs.org/) v14 App Router and React Server Components. Styling with [TailwindCSS](https://tailwindcss.com/).
 
