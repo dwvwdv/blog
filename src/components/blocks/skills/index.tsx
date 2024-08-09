@@ -17,7 +17,7 @@ import swiftSvg from '@/images/logo/swift.svg'
 import tailwindCSSSvg from '@/images/logo/tailwind-css.svg'
 import typeScriptSvg from '@/images/logo/typescript.svg'
 import vueSvg from '@/images/logo/vue.svg'
-import webpackSvg from '@/images/logo/webpack.svg'
+import angularSvg from '@/images/logo/angular.svg'
 
 const Galton = dynamic(() => import('./galton').then(module => module.Galton), {
   ssr: false,
@@ -35,7 +35,6 @@ const images: StaticImageData[] = [
   vueSvg,
   nodejsSvg,
   reactNativeSvg,
-  webpackSvg,
   swiftSvg,
   nestjsSvg,
   prismaSvg,
