@@ -39,6 +39,7 @@ const images: StaticImageData[] = [
   nestjsSvg,
   prismaSvg,
   graphqlSvg,
+	angularSvg,
 ]
 export const Skills = () => {
   return (
