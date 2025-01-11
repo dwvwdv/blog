@@ -1,24 +1,19 @@
 name: Deploy on Discussion Create
-
 on:
   discussion:
     types: [created, edited]
-
 jobs:
   webhook:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Vercel deploy webhook
+      - name: Check Secret
         run: |
-          curl -X POST ${{ secrets.DEPLOY_HOOK }}
-
-jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Check secret
-      run: |
-        if [ -n "${{ secrets.DEPLOY_HOOK }}" ]; then
-          echo "Secret exists"
-        else
-          echo "Secret is empty"
-        fi
+          if [ -n "${{ secrets.DEPLOY_HOOK }}" ]; then
+            echo "Secret exists"
+          else
+            echo "Secret is empty"
+          fi
+      - name: Trigger Vercel Deploy Webhook
+        if: ${{ secrets.DEPLOY_HOOK != '' }}
+        run: |
+          curl -X POST "${{ secrets.DEPLOY_HOOK }}"
