@@ -3,6 +3,7 @@ on:
   discussion:
     types: [created, edited]
 jobs:
+  secrets: inherit
   webhook:
     runs-on: ubuntu-latest
     steps:
