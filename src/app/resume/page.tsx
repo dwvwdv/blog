@@ -1,7 +1,6 @@
 import { IconX } from '@tabler/icons-react'
 
 import type { Metadata, Viewport } from 'next'
-import Link from 'next/link'
 
 import { Dot } from '@/components/blocks/resume'
 import { Typed, TypedContent, TypedText } from '@/components/typed'
