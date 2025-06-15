@@ -8,223 +8,110 @@ import { Typed, TypedContent, TypedText } from '@/components/typed'
 import { formatDateTime } from '@/utils'
 
 export const metadata: Metadata = {
-  title: 'Resume',
+	title: 'Resume',
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'dark',
-  themeColor: [
-    { color: '#282935', media: '(prefers-color-scheme: light)' },
-    { color: '#282935', media: '(prefers-color-scheme: dark)' },
-  ],
+	colorScheme: 'dark',
+	themeColor: [
+		{ color: '#282935', media: '(prefers-color-scheme: light)' },
+		{ color: '#282935', media: '(prefers-color-scheme: dark)' },
+	],
 }
 
 export default function Page() {
-  const lastBuildTime = formatDateTime(
-    {
-      day: '2-digit',
-      hour: '2-digit',
-      hour12: false,
-      minute: '2-digit',
-      month: 'short',
-      second: '2-digit',
-      weekday: 'short',
-    },
-    new Date(),
-  )
+	const lastBuildTime = formatDateTime(
+		{
+			day: '2-digit',
+			hour: '2-digit',
+			hour12: false,
+			minute: '2-digit',
+			month: 'short',
+			second: '2-digit',
+			weekday: 'short',
+		},
+		new Date(),
+	)
 
-  return (
-    <div className='flex min-h-svh items-center justify-center bg-[#282935] p-4'>
-      <main className='flex max-h-[90svh] max-w-prose flex-1 flex-col overflow-hidden rounded-2xl border border-gray-600 shadow-2xl shadow-black'>
-        <header className='grid h-11 flex-none grid-cols-[1fr_2fr_1fr] items-center border-b border-gray-800 bg-zinc-700 px-4 text-xs font-semibold'>
-          <span className='flex gap-2'>
-            <Link aria-label='Back to home page' href='/'>
-              <Dot className='group relative flex items-center justify-center bg-red-500 before:absolute before:-inset-4 before:content-["_"]'>
-                <IconX className='invisible size-2.5 group-hover:visible' />
-              </Dot>
-            </Link>
-            <Dot className='cursor-not-allowed bg-yellow-400' />
-            <Dot className='cursor-not-allowed bg-green-500' />
-          </span>
-          <span className='text-center text-gray-400'>
-            zhangyu@MacBook-Air:~
-          </span>
-          <span className='text-end text-gray-500'>⌥⌘1</span>
-        </header>
-        <div className='min-h-60 flex-1 overflow-y-auto p-2 text-sm text-gray-200 duration-300 animate-in fade-in'>
-          <p className='mb-2'>Last login: {lastBuildTime} on ttys003</p>
-          <Typed>
-            <TypedText>whoami</TypedText>
-            <TypedContent>
-              <p>
-                Hi, I&apos;m <strong>Lazy Bone.</strong>, I from {' '}
-                <strong>Taiwan</strong>.
-              </p>
-              <p>
-                I am a full-stack engineer who has been involving in
-                development since <strong>2016</strong>, Neovim is my favorite editor,
-								I always do the work in terminal,All TUI tools are the best gift for me,
-								if you also like terminal workflow,I think we will become good friends!
-              </p>
-              <p>
-                I have amassed substantial practical experience in the{' '}
-                <code>Angular/.NET</code> technology stack.
-              </p>
-            </TypedContent>
-            <TypedText afterDelay={1000}>ls</TypedText>
-            <TypedContent>
-              <div className='grid grid-cols-2 gap-2 px-4 font-semibold text-sky-500'>
-                <span>opensource</span>
-                <span>projects</span>
-                <span>blog-info</span>
-                <span>experience</span>
-                <span>skills</span>
-                <span>contact</span>
-              </div>
-            </TypedContent>
-            <TypedText afterDelay={700}>opensource</TypedText>
-            <TypedContent>
-              <p>
-                I am passionate about contributing to the open-source community,
-                having made multiple contributions to well-known projects such
-                as <code>Ant Design</code>.
-              </p>
-              <p>
-                Additionally, I have developed and maintained lots of
-                open-source projects, which have been successfully published on
-                npm and collectively garnered nearly <i>20,000</i> downloads.
-              </p>
-            </TypedContent>
-            <TypedText afterDelay={1000}>projects</TypedText>
-            <TypedContent>
-              <ul>
-                <li>
-                  <strong>
-                    <a href='https://github.com/zhangyu1818/react-markdown-toc'>
-                      react-markdown-toc
-                    </a>
-                  </strong>
-                </li>
-                <li>Generating a Table of Contents (TOC) from Markdown.</li>
-              </ul>
-              <ul>
-                <li>
-                  <strong>
-                    <a href='https://github.com/zhangyu1818/from-to'>
-                      from-to.js
-                    </a>
-                  </strong>
-                </li>
-                <li>Transitioning from one value to another.</li>
-              </ul>
-              <ul>
-                <li>
-                  <strong>
-                    <a href='https://github.com/zhangyu1818/react-server-only-context'>
-                      react-server-only-context
-                    </a>
-                  </strong>
-                </li>
-                <li>
-                  A straightforward alternative for using context within React
-                  Server Components.
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <strong>
-                    <a href='https://github.com/zhangyu1818/tw-styled'>
-                      tw-styled
-                    </a>
-                  </strong>
-                </li>
-                <li>
-                  Create Tailwind CSS-styled React components with ease using
-                  tw-styled.
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <strong>
-                    <a href='https://github.com/zhangyu1818/use-flip'>
-                      use-flip
-                    </a>
-                  </strong>
-                </li>
-                <li>
-                  Effortless FLIP animations with a React Hook for smoother
-                  transitions.
-                </li>
-              </ul>
-            </TypedContent>
-            <TypedText>blog-info</TypedText>
-            <TypedContent>
-              <p>
-                I am keen on sharing knowledge as well as writing articles and
-                tutorials regularly, covering <code>JavaScript</code>,
-                <code>TypeScript</code>, <code>React</code> source-code,{' '}
-                <code>CSS</code>, and animation.
-              </p>
-              <p>
-                My articles have been read over <i>150,000</i> times.
-                Previously, I primarily wrote in Chinese, but currently, my goal
-                is to write articles in English.
-              </p>
-            </TypedContent>
-            <TypedText>experience</TypedText>
-            <TypedContent>
-              <p>Until now, I have worked for two companies only.</p>
-              <p>
-                The first company focused on developing high-performance and
-                versatile dialing systems and management platforms for internal
-                enterprise use, along with various mini-programs and Apps.
-              </p>
-              <p>
-                The second company specialized in creating visually appealing
-                and high-performance e-commerce platforms and Apps for
-                cross-border trade.
-              </p>
-            </TypedContent>
-            <TypedText>skills</TypedText>
-            <TypedContent>
-              <p>
-                I excel in <code>JavaScript</code> and <code>TypeScript</code>,
-                proficiently utilizing <code>CSS</code> to create visually
-                appealing and responsive web pages.
-              </p>
-              <p>
-                I have a deep understanding of <code>React</code> and have
-                explored other popular frameworks as well. Currently, my work
-                primarily involves using <code>Next.js</code>, and I have
-                extensive experience with <code>App Router</code>.
-              </p>
-              <p>
-                In addition to front-end development, I am also familiar with
-                backend development using tools such as <code>Prisma</code>,{' '}
-                <code>NestJS</code>, and <code>GraphQL</code>.
-              </p>
-              <p>
-                Furthermore, I have experience in mobile App development using
-                <code>React Native</code> and <code>SwiftUI</code>.
-              </p>
-            </TypedContent>
-            <TypedText>Contact</TypedText>
-            <TypedContent>
-              <div className='my-4 flex items-center'>
-                <p className='basis-1/4 text-center font-semibold'>Social</p>
-                <div className='grid flex-1 grid-cols-2 justify-items-start gap-2'>
-                  <a href='https://github.com/dwvwdv'>Github</a>
-                  <a href='https://zeroday.hitcon.org/user/dwvwdv/vulnerability'>HITCON</a>
-                </div>
-              </div>
-              <div className='flex items-center'>
-                <p className='basis-1/4 text-center font-semibold'>Email</p>
-                <a href='mailto:everycansee.ku682@passinbox.com'>everycansee.ku682@passinbox.com</a>
-              </div>
-            </TypedContent>
-          </Typed>
-        </div>
-      </main>
-    </div>
-  )
+	return (
+		<div className='flex min-h-screen items-center justify-center bg-[#282935] p-6'>
+			<main className='flex max-h-[90vh] max-w-prose flex-1 flex-col overflow-hidden rounded-2xl border border-gray-700 shadow-xl shadow-black'>
+				<header className='grid h-12 flex-none grid-cols-[1fr_2fr_1fr] items-center border-b border-gray-800 bg-zinc-800 px-6 text-xs font-semibold text-gray-300'>
+					<span className='flex gap-3'>
+						<Dot className='relative flex items-center justify-center bg-red-600'>
+							<IconX className='invisible group-hover:visible size-3' />
+						</Dot>
+						<Dot className='cursor-not-allowed bg-yellow-500' />
+						<Dot className='cursor-not-allowed bg-green-600' />
+					</span>
+					<span className='text-center font-mono text-gray-400'>
+						dwvwdv@devstation:~$
+					</span>
+					<span className='text-end text-gray-500'>⌥⌘D</span>
+				</header>
+				<div className='flex-1 overflow-y-auto p-4 text-sm text-gray-200 animate-fadeIn'>
+					<p className='mb-3'>Last login: {lastBuildTime} on ttys003</p>
+					<Typed>
+						<TypedText>whoami</TypedText>
+						<TypedContent>
+							<p>
+								Hello, I&apos;m <strong>Lazy Bone</strong>, a software developer and HackerOne white hat with a passion for innovation and security.
+							</p>
+							<p>
+								Based in <strong>Taiwan</strong>, I specialize in <code>C#</code>, <code>JavaScript</code>, <code>Python</code>, and <code>Flutter</code>, while actively learning <code>Golang</code>.
+							</p>
+							<p>
+								I focus on terminal-centric workflows and efficient development environments.
+							</p>
+						</TypedContent>
+
+						<TypedText afterDelay={1000}>ls</TypedText>
+						<TypedContent>
+							<div className='grid grid-cols-2 gap-3 px-4 font-semibold text-sky-500'>
+								<span>opensource</span>
+								<span>experience</span>
+								<span>skills</span>
+								<span>contact</span>
+							</div>
+						</TypedContent>
+
+						<TypedText>experience</TypedText>
+						<TypedContent>
+							<p>
+								I am currently employed at a Fortune Global 500 Japanese enterprise, where I focus on software development and system-level architecture.
+							</p>
+						</TypedContent>
+
+						<TypedText>skills</TypedText>
+						<TypedContent>
+							<p>
+								Proficient in <code>C#</code>, <code>JavaScript</code>, <code>TypeScript</code>, and <code>Python</code>.
+							</p>
+							<p>
+								Experienced with tools including <code>Supabase</code>, <code>SQL Server</code>, and <code>Neovim</code>.
+							</p>
+							<p>
+								Also skilled in mobile development with <code>Flutter</code> and <code>SwiftUI</code>.
+							</p>
+						</TypedContent>
+
+						<TypedText>contact</TypedText>
+						<TypedContent>
+							<div className='my-4 flex items-center gap-6'>
+								<p className='basis-1/4 text-center font-semibold'>Social</p>
+								<div className='grid flex-1 grid-cols-2 gap-4 text-sky-400'>
+									<a href='https://github.com/dwvwdv' target='_blank' rel='noreferrer'>GitHub</a>
+									<a href='https://zeroday.hitcon.org/user/dwvwdv/vulnerability' target='_blank' rel='noreferrer'>HITCON</a>
+								</div>
+							</div>
+							<div className='flex items-center gap-4'>
+								<p className='basis-1/4 text-center font-semibold'>Email</p>
+								<a href='mailto:everycansee.ku682@passinbox.com' className='text-sky-400'>everycansee.ku682@passinbox.com</a>
+							</div>
+						</TypedContent>
+					</Typed>
+				</div>
+			</main>
+		</div>
+	)
 }
